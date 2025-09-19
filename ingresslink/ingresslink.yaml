@@ -6,7 +6,6 @@ metadata:
   namespace: nginx-ingress
 spec:
   bigipRouteDomain: 0
-  host: cafe.example.com
   iRules:
   - /Common/Proxy_Protocol_iRule
   selector:
