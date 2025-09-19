@@ -1,0 +1,15 @@
+apiVersion: cis.f5.com/v1
+kind: IngressLink
+metadata:
+  annotations:
+  name: nginx-ingresslink-nginx-web
+  namespace: nginx-ingress
+spec:
+  bigipRouteDomain: 0
+  host: nginx-web.example.com
+  iRules:
+  - /Common/Proxy_Protocol_iRule
+  selector:
+    matchLabels:
+      app: ingresslink
+  virtualServerAddress: 10.1.10.103
